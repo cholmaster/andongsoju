@@ -63,10 +63,11 @@ int __init init_device (void)
     GET_UUID(NAME);   /*Name is by UUID */
     __device_name__=kmalloc(sizeof(char)*36,GFP_KERNEL);
     /* * * * * * * * * */
-    GET_UUID(CLASSNAME);         /* Class name and  */
-    GET_UUID(__device_name__);   /* Device name is  */
-    __MAJOR__=MAJOR(dev);        /*   named by      */
-    __MINOR__=MINOR(dev);        /*   UUID          */
+    GET_UUID(CLASSNAME);
+    /* Class name and  */
+    __device_name="buffer0";   
+    __MAJOR__=MAJOR(dev);        
+    __MINOR__=MINOR(dev);       
     /* * * * * * * * * */
     dev=MKDEV(__MAJOR__,__MINOR__);
     err = alloc_chrdev_region(&dev,__MINOR__,cnt,NAME);
