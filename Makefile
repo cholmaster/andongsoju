@@ -7,6 +7,7 @@ RAND := $(shell uuidgen)
 
 default:
 	$(MAKE) -C $(KDIR) $(FLAGS) M=$(PWD) LDDINC=$(PWD)/include modules
+	$(MAKE) -C $(KDIR) $(FLAGS) M=$(PWD) LDDINC=$(PWD)/include modules_install
 #	/usr/src/kernels/$(shell uname -r)/scripts/sign-file sha256 buffer.priv buffer_public.der buffer.ko
 test:
 	$(CC) -o main main.c

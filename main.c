@@ -5,19 +5,28 @@
 #include <errno.h>
 #include <string.h>
 #include <sys/ioctl.h>
+#include <stdatomic.h>
+#include <stdbool.h>
 #include "buffer_io.h"
-int main (int argc, char **argv)
+typedef atomic_int aint;
+int counter = 1000;
+int main (aint argc, char **argv)
 {
-    int fd;
+    aint fd;
     __BUF__ args;
-    if(argc<2) {
-        return 1;
+    while(true) {
+        if(argc<2) {
+            return 1;
+        }
+        if((fd=open(argv[1],O_RDWR))<0) {
+            perror("Open error");
+	    counter *= 3;
+        }
+        ioctl(fd,__SORT_DESCENDING__,args);
+        if(close(fd)) {
+            perror("Close error");
+	    counter *= 3;
+        }
     }
-    if((fd=open(argv[1],O_RDWR))<0) {
-        perror("Open error");
-    }
-    ioctl(fd,__SORT_DESCENDING__,args);
-    if(close(fd)) {
-        perror("Close error");
-    }
+    sleep (counter);
 }

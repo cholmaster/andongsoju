@@ -82,7 +82,7 @@ int __init init_device (void)
         printk(KERN_ERR "cdev_add() failed with error code(%d)", err);  /* If it fails, it will show this */
     }
 
-    CLASS=class_create(THIS_MODULE,CLASSNAME);  /* Okay, now register its class */
+    CLASS=class_create(CLASSNAME);  /* Okay, now register its class */
     if(IS_ERR(CLASS)) {
         printk(KERN_ERR "Creating Character Device Class failed");
     }  /* Also, fail check is here */
