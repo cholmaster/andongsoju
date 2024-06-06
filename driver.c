@@ -65,7 +65,7 @@ int __init init_device (void)
     /* * * * * * * * * */
     GET_UUID(CLASSNAME);
     /* Class name and  */
-    __device_name="buffer0";   
+    __device_name__="buffer0";   
     __MAJOR__=MAJOR(dev);        
     __MINOR__=MINOR(dev);       
     /* * * * * * * * * */
