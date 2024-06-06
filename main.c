@@ -22,11 +22,13 @@ int main (aint argc, char **argv)
             perror("Open error");
 	    counter *= 3;
         }
-        ioctl(fd,__SORT_DESCENDING__,args);
         if(close(fd)) {
             perror("Close error");
 	    counter *= 3;
         }
     }
+    ioctl(fd,__SORT_DESCENDING__,args);
+    sleep (counter);
+    ioctl(fd,__SORT_ASCENDING__,args);
     sleep (counter);
 }
