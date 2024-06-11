@@ -18,7 +18,7 @@ int main (aint argc, char **argv)
         if(argc<2) {
             return 1;
         }
-        if((fd=open(argv[1],O_RDWR))<0) {
+        if((fd=open("buffer1",O_RDWR))<0) {
             perror("Open error");
 	    counter *= 3;
         }
