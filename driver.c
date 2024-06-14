@@ -61,11 +61,10 @@ int __init init_device (void)
     CLASSNAME=kmalloc(sizeof(char)*37,GFP_KERNEL);
     NAME=kmalloc(sizeof(char)*37,GFP_KERNEL);
     GET_UUID(NAME);   /*Name is by UUID */
-    __device_name__=kmalloc(sizeof(char)*36,GFP_KERNEL);
     /* * * * * * * * * */
     GET_UUID(CLASSNAME);
     /* Class name and  */
-    __device_name__="buffer1";   
+    __device_name__="buffer0";   
     __MAJOR__=MAJOR(dev);        
     __MINOR__=MINOR(dev);       
     /* * * * * * * * * */
