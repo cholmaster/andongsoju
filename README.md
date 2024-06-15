@@ -39,7 +39,7 @@ typedef __buf_info_t__ __BUF__;
 
 Sort is performed, with its item size in bytes.
 
-Device Driver's name format is /dev/${RANDOM_UUID}.
+Device Driver's name format is /dev/buffer0.
 
 I/O is performed as FIFO.
 
