@@ -1,5 +1,5 @@
 
-# Size-based Sortable FIFO Device Driver for Linux
+# Sortable FIFO Device Driver for Linux
 ## headers
 ----------------
 ```c
@@ -39,14 +39,9 @@ typedef __buf_info_t__ __BUF__;
 
 Sort is performed, with its item size in bytes.
 
-Device Driver's name format is /dev/buffer0.
+Device Driver's name format is /dev/${RANDOM_UUID}.
 
 I/O is performed as FIFO.
 
-Adapt for any usage.
-
-You can change its allocation space.
-
-Thanks.
-
+Useful Example: 15-rpl-classic/code in SDNS-RPL, copy dis-sender.native into /usr/bin/rpl, use your internet with peers
 

@@ -67,7 +67,6 @@ void sortthree ( list * lst, _Bool is_ascending );  /* Needed for Quick sort imp
 ll index_of(list *lst, node *nd);     /* Index of specific node */
 long int __user io_sort(struct file *file, unsigned int cmd, unsigned long arg); /* IOCTL Function calls! */
 _Bool comp(ll len_l, ll len_r, _Bool is_ascending);    /* comparison between two long long, with flag */
-_Bool regen_sorted( list * lst, _Bool is_ascending);
 #define PREFIX 16384 /* this is string's max length*/
 #define LST_MAX 10000 /* and list can handle up to 10000, if possible. */
 #define UUID_LEN 36
