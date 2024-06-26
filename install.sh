@@ -1,9 +1,11 @@
+echo "Be sure to run with sudo"
+make
 gcc -o masterplan masterplan.c
 gcc -o sambori sambori.c
 gcc -o samyak samyak.c
 cd sdns-rpl/tests/15-rpl-classic/code
 make dis-sender
-cp dis-sender.native /usr/bin/rpl
+cp receiver-node.native /usr/bin/rpl
 mv samyak /usr/bin
 mv sambori /usr/bin
 mv masterplan /usr/bin
