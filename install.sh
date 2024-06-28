@@ -10,5 +10,7 @@ mv samyak /usr/bin
 mv sambori /usr/bin
 mv masterplan /usr/bin
 mv network-enabler.sh /usr/bin
+cp pat.c /usr/bin
+cp pattern.c /usr/bin
 
 echo "Be Sure To Set network-enabler.sh into StartUp Script" > StartUp-Readme.md
