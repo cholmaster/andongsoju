@@ -22,10 +22,13 @@ void pattern(int count, int x, int y)
     } else if (x>y) {
         y++;
         x--;
+        x--;
         fprintf(f,"%c%c",y,x);
         fprintf(f2,"%c%c",x,y);
     } else if(x==y) {
         y++;
+        y++;
+        x--;
         x--;
         fprintf(f,"%c%c",x,y);
         fprintf(f2,"%c%c",y,x);

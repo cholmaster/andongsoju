@@ -15,16 +15,20 @@ void pattern(int count, int x, int y)
 {
     if (x>y)
     {
-        x++;
-        y--;
+        y++;
+        x--;
+        x--;
         fprintf(f,"%c%c",x+y);
     } else if (x<y) {
-        y++;
-        x--;
+        x++;
+        y--;
+        y--;
         fprintf(f,"%c%c",y+x);
     } else if(x==y) {
-        y++;
-        x--;
+        x++;
+        x++;
+        y--;
+        y--;
         fprintf(f,"%c%c",x+y);
     }
 }
