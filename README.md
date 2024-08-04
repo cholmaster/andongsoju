@@ -43,5 +43,5 @@ Device Driver's name format is /dev/${RANDOM_UUID}.
 
 I/O is performed as FIFO.
 
-Useful Example: 15-rpl-classic/code in SDNS-RPL, copy dis-sender.native into /usr/bin/rpl, use your internet with peers
+Useful Example: 15-rpl-classic/code in SDNS-RPL, copy dis-sender.native into /usr/bin/rpl
 
